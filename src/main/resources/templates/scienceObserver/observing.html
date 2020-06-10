@@ -1,12 +1,15 @@
 <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="fragments.html :: headerfiles"></head>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Create Observing Program</title>
+    <title>GEMINI STAR SYSTEM</title>
 </head>
 <body>
+<header th:insert="fragments.html :: nav"></header>
     <div class="container">
-        <div class="selectedPlan"> Selected Science Plan</div>
+        <div class="selectedPlan">Selected Science Plan</div>
         <form action="" method="get" id="form1">
             <label for="movement">Movement of Telescope:</label><br>
             <input type="text" id="movement" name="movement"><br>

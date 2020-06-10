@@ -1,9 +1,13 @@
 <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="fragments.html :: headerfiles"></head>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>GEMINI STAR SYSTEM</title>
 </head>
 <body>
+<header th:insert="fragments.html :: nav"></header>
 <form action="">
     <label for="planName">Science Plan Name</label> <br>
     <input type="text" id="planName" name="planName"> <br>
