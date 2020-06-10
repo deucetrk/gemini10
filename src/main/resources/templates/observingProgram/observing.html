@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Observing Program</title>
+</head>
+<body>
+    <div class="container">
+        <div class="selectedPlan"> Selected Science Plan</div>
+        <form action="" method="get" id="form1">
+            <label for="movement">Movement of Telescope:</label><br>
+            <input type="text" id="movement" name="movement"><br>
+            <label for="lens">Lens:</label>
+            <select id="lens" name="lens">
+                <option value="1">1</option>
+            </select><br>
+            <label for="filter">Filters:</label>
+            <select id="filter" name="filter">
+                <option value="none">None</option>
+            </select><br>
+            <label for="focus">Focus Range:</label><br>
+            <input type="text" id="focus" name="focus"><br>
+            <label for="light">Light Detector:</label>
+            <select id="light" name="light">
+                <option value="none">None</option>
+            </select><br>
+            <form action="" method="get" id="form2">
+                <text> Require Special Equipment?</text><br>
+                <input type="radio" id="speYes" name="specialEquipment" value="Yes">
+                <label for="speYes">Yes</label><br>
+                <input type="radio" id="speNo" name="specialEquipment" value="No">
+                <label for="speNo">No</label><br>
+                <input type="submit" value="Send Notification" form="form2">
+            </form>
+            <input type="submit" value="Create Observing Program" form="form1">
+        </form>
+    </div>
+</body>
+</html>
