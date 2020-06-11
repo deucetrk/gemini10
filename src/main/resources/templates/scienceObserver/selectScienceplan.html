@@ -2,6 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:insert="fragments.html :: headerfiles"></head>
 <html lang="en">
+<script src="../static/js/selectScienceplan.js"></script>
 <head>
     <meta charset="UTF-8">
     <title>GEMINI STAR SYSTEM</title>
@@ -9,9 +10,31 @@
 <body>
 <header th:insert="fragments.html :: nav"></header>
 <div class="container">
-    <div class="scienceplanlist"> List of science plan</div>
+    <div class="description"> List of science plan</div>
+    <div class="table">
+        <table>
+            <tr>
+                <th>Plan No.</th>
+                <th>Creator</th>
+                <th>Submitter</th>
+                <th>Funding</th>
+                <th>Objective</th>
+                <th>Star System</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Telescope Location</th>
+                <th>Requirement</th>
+            </tr>
+                <tr>
+                    <div class="listSciencePlan"></div>
+                </tr>
+
+        </table>
+    </div>
 
     <button><a th:href="@{~/scienceObserver/createObserving/create}">Next</a></button>
 </div>
+
+
 </body>
 </html>
