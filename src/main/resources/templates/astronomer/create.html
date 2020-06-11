@@ -8,39 +8,42 @@
 </head>
 <body>
 <header th:insert="fragments.html :: nav"></header>
-<form action="">
-    <label for="planName">Science Plan Name</label> <br>
+<form th:action="" method="post" >
+    <label for="planName">SciencePlan Name:</label> <br>
     <input type="text" id="planName" name="planName"> <br>
 
-    <label for="description">Description:</label> <br>
-    <input type="text" id="description" name="description"> <br>
+    <label for="creator">Creator:</label> <br>
+    <input type="text" id="creator" name="creator"> <br>
 
-    <label for="objective">Objective</label> <br>
-    <input type="text" id="objective" name="objective"> <br>
+    <label for="submitter">Submitter:</label> <br>
+    <input type="text" id="submitter" name="submitter"> <br>
 
-    <label for="starSystem">Select Your Star System: </label>
-    <select id="starSystem" name="starSystem">
-    </select>
-    <br>
+    <label for="fundingInUSD">Funding(USD):</label> <br>
+    <input type="text" id="fundingInUSD" name="fundingInUSD"> <br>
 
-    <label for="date">Schedule to Observe: </label>
-    <input type="date" id="date" name="date"> <br>
+    <label for="objectives">Objective</label> <br>
+    <input type="text" id="objectives" name="objectives"> <br>
 
-    <label for="location">Telescope Location</label>
-    <select name="location" id="location">
-    </select>
-    <br>
+    <label for="startDate">Start Date: </label>
+    <input type="date" id="startDate" name="startDate"> <br>
 
-    <label for="requirement">Data Requirement</label> <br>
-    <textarea name="requirement" id="requirement" cols="30" rows="10"></textarea> <br>
-    <input type="submit" value="submit"> <br> <br>
+    <label for="endDate">End Date: </label>
+    <input type="date" id="endDate" name="endDate"> <br>
 
-    <button>Confirmed</button>
-    <button>Canceled</button>
+    <label for="fileQuality">File Quality:</label> <br>
+    <input type="text" id="fileQuality" name="fileQuality"> <br>
 
+    <label for="contrast">Contrast:</label> <br>
+    <input type="text" id="contrast" name="contrast"> <br>
 
+    <label for="brightness">Brightness:</label> <br>
+    <input type="text" id="brightness" name="brightness"> <br>
 
+    <label for="saturation">Saturation:</label> <br>
+    <input type="text" id="saturation" name="saturation"> <br>
 
+    <input type="submit" value="Submit">
 </form>
+
 </body>
 </html>
