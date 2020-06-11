@@ -16,7 +16,7 @@ import java.util.Date;
 @Entity(name = "SciencePlan")
 public class SciencePlan extends BaseSciencePlan {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(generator = "address_seq", strategy = GenerationType. SEQUENCE)
     private int planNo;
     private String planName;
     private String creator;

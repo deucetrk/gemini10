@@ -8,7 +8,7 @@
 </head>
 <body>
 <header th:insert="fragments.html :: nav"></header>
-<form th:action="" method="post" >
+<form th:action="@{/sciencePlan/create}" method="post" >
     <label for="planName">SciencePlan Name:</label> <br>
     <input type="text" id="planName" name="planName"> <br>
 
@@ -24,11 +24,11 @@
     <label for="objectives">Objective</label> <br>
     <input type="text" id="objectives" name="objectives"> <br>
 
-    <label for="startDate">Start Date: </label>
-    <input type="date" id="startDate" name="startDate"> <br>
+    <label for="startDate">Start Date: </label> <br>
+    <input type="text" id="startDate" name="startDate" placeholder="dd/mm/yyyy"> <br>
 
-    <label for="endDate">End Date: </label>
-    <input type="date" id="endDate" name="endDate"> <br>
+    <label for="endDate">End Date: </label> <br>
+    <input type="text" id="endDate" name="endDate" placeholder="dd/mm/yyyy"> <br>
 
     <label for="fileQuality">File Quality:</label> <br>
     <input type="text" id="fileQuality" name="fileQuality"> <br>
@@ -44,24 +44,30 @@
 
     <label for="teleLoc">Choose a Telescope Location:</label>
     <select name="teleLoc" id="teleLoc">
-        <option value="1">1</option>
-        <option value="2">2</option>
+        <option value="1">HAWAII</option>
+        <option value="2">CHILE</option>
     </select> <br>
 
     <label for="fileType">Choose a File Type:</label>
     <select name="fileType" id="fileType">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
+        <option value="1">RAW</option>
+        <option value="2">PNG</option>
+        <option value="3">JPEG</option>
+        <option value="4">TIFF</option>
+    </select> <br>
+
+    <label for="colorType">Choose a Color Type:</label>
+    <select name="colorType" id="colorType">
+        <option value="1">BW</option>
+        <option value="2">COLOR</option>
     </select> <br>
 
     <label for="starSystem">Choose a Star System:</label>
     <select name="starSystem" id="starSystem">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
+        <option value="1">Dione</option>
+        <option value="2">Atlas</option>
+        <option value="3">Janus</option>
+        <option value="4">Ananke</option>
     </select> <br>
 
     <input type="submit" value="Submit">
