@@ -7,13 +7,18 @@ package edu.gemini.app.ocs.model;
 
 import jparsec.ephem.Target;
 
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Objects;
 
-public class BaseSciencePlan {
+
+
+public class BaseSciencePlan  {
     private int planNo;
     private String creator;
     private String submitter;

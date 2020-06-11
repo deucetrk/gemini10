@@ -48,6 +48,14 @@
             <scope>test</scope>
         </dependency>
 
+
+        <!--h2 database-->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
         <!-- Security -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -63,6 +71,8 @@
             <version>9.0.33</version>
         </dependency>
     </dependencies>
+
+
 
     <build>
         <plugins>
