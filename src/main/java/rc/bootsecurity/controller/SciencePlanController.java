@@ -5,9 +5,14 @@ import edu.gemini.app.ocs.model.DataProcRequirement;
 import jparsec.ephem.Target;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import rc.bootsecurity.db.SciencePlanRepository;
 import rc.bootsecurity.model.SciencePlan;
+import rc.bootsecurity.model.User;
+
+import java.util.List;
+import java.util.Optional;
 
 
 @Controller
@@ -98,7 +103,107 @@ public class SciencePlanController {
         return "Create SciencePlan Successfully";
     }
 
+    @PutMapping("update")
+    public @ResponseBody
+    String updateSciencePlan(@RequestParam int id,
+                             @RequestParam String planName,
+                             @RequestParam String creator,
+                             @RequestParam String submitter,
+                             @RequestParam double fundingInUSD,
+                             @RequestParam String objectives,
+                             @RequestParam String startDate,
+                             @RequestParam String endDate,
+                             @RequestParam double fileQuality,
+                             @RequestParam double contrast,
+                             @RequestParam double brightness,
+                             @RequestParam double saturation,
+                             @RequestParam Integer teleLoc,
+                             @RequestParam Integer fileType,
+                             @RequestParam Integer colorType,
+                             @RequestParam Integer starSystem) {
+        Optional<SciencePlan> newSc = sciencePlanRepository.findById(id);
+        if (newSc.isPresent()) {
+            SciencePlan sp = newSc.get();
+            sp.setPlanName(planName);
+            sp.setCreator(creator);
+            sp.setSubmitter(submitter);
+            sp.setFundingInUSD(fundingInUSD);
+            sp.setObjectives(objectives);
+            sp.setStartDate(startDate);
+            sp.setEndDate(endDate);
+            sp.setFileQuality(fileQuality);
+            sp.setContrast(contrast);
+            sp.setBrightness(brightness);
+            sp.setSaturation(saturation);
+            switch (teleLoc) {
+                case 1:
+                    sp.setTelescopeLocation(BaseSciencePlan.TELESCOPELOC.HAWAII);
+                    break;
+                case 2:
+                    sp.setTelescopeLocation(BaseSciencePlan.TELESCOPELOC.CHILE);
+                    break;
+                default:
+                    break;
+            }
+            switch (fileType) {
+                case 1:
+                    sp.setFileType(DataProcRequirement.TYPE.RAW);
+                    break;
+                case 2:
+                    sp.setFileType(DataProcRequirement.TYPE.PNG);
+                    break;
+                case 3:
+                    sp.setFileType(DataProcRequirement.TYPE.JPEG);
+                    break;
+                case 4:
+                    sp.setFileType(DataProcRequirement.TYPE.TIFF);
+                    break;
+                default:
+                    break;
+            }
+            switch (colorType) {
+                case 1:
+                    sp.setColorType(DataProcRequirement.COLOR_TYPE.BW);
+                    break;
+                case 2:
+                    sp.setColorType(DataProcRequirement.COLOR_TYPE.COLOR);
+                    break;
+                default:
+                    break;
+            }
+            switch (starSystem) {
+                case 1:
+                    sp.setStarSystem(Target.TARGET.Dione);
+                    break;
+                case 2:
+                    sp.setStarSystem(Target.TARGET.Atlas);
+                    break;
+                case 3:
+                    sp.setStarSystem(Target.TARGET.Janus);
+                    break;
+                case 4:
+                    sp.setStarSystem(Target.TARGET.Ananke);
+                    break;
+                default:
+                    break;
+            }
+
+            sciencePlanRepository.save(sp);
 
 
+        }
+
+        return "updated";
+    }
+
+    @GetMapping("getplan")
+    public @ResponseBody String spList(){
+        return "sciencePlanlist";
+    }
+//    @RequestMapping("selectScienceplan")
+//    public String listSciencePlan(Model model){
+//        model.addAttribute("selectScienceplan", sciencePlanRepository.listAllSciencePlan() );
+//        return "scienceObserver/selectScienceplan" ;
+//    }
 
     }
