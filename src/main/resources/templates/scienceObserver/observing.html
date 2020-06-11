@@ -2,6 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:insert="fragments.html :: headerfiles"></head>
 <html lang="en">
+<script src="../static/js/observing.js"></script>
 <head>
     <meta charset="UTF-8">
     <title>GEMINI STAR SYSTEM</title>
@@ -12,20 +13,20 @@
         <div class="selectedPlan">Selected Science Plan</div>
         <form action="" method="get" id="form1">
             <label for="movement">Movement of Telescope:</label><br>
-            <input type="text" id="movement" name="movement"><br>
+            <input type="text" id="movement" name="movement" required><br>
             <label for="lens">Lens:</label>
             <select id="lens" name="lens">
-                <option value="1">1</option>
+                <option id="lenslist"></option>
             </select><br>
             <label for="filter">Filters:</label>
             <select id="filter" name="filter">
-                <option value="none">None</option>
+                <option id="filterlist"></option>
             </select><br>
             <label for="focus">Focus Range:</label><br>
-            <input type="text" id="focus" name="focus"><br>
+            <input type="text" id="focus" name="focus" required><br>
             <label for="light">Light Detector:</label>
             <select id="light" name="light">
-                <option value="none">None</option>
+                <option id="lightlist"></option>
             </select><br>
             <form action="" method="get" id="form2">
                 <text> Require Special Equipment?</text><br>
@@ -33,9 +34,9 @@
                 <label for="speYes">Yes</label><br>
                 <input type="radio" id="speNo" name="specialEquipment" value="No">
                 <label for="speNo">No</label><br>
-                <input type="submit" value="Send Notification" form="form2">
+                <input  id="specialepuip" type="submit" value="Send Notification" form="form2">
             </form>
-            <input type="submit" value="Create Observing Program" form="form1">
+            <input id="allsubmit" type="submit" value="Create Observing Program" form="form1">
         </form>
     </div>
 </body>
