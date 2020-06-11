@@ -7,7 +7,7 @@ package edu.gemini.app.ocs.model;
 
 import java.util.Objects;
 
-public class DataProcRequirement {
+public class    DataProcRequirement {
     public enum TYPE {
         RAW, PNG, JPEG, TIFF
     }
