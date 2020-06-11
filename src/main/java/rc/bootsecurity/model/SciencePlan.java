@@ -1,23 +1,22 @@
 package rc.bootsecurity.model;
 
 
-import edu.gemini.app.ocs.model.BaseObservingProgram;
 import edu.gemini.app.ocs.model.BaseSciencePlan;
 import edu.gemini.app.ocs.model.DataProcRequirement;
 import jparsec.ephem.Target;
-import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
-
-import edu.gemini.app.ocs.model.*;
 
 @Entity(name = "SciencePlan")
 public class SciencePlan extends BaseSciencePlan {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int planNo;
     private String planName;
     private String creator;

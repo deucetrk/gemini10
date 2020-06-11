@@ -6,11 +6,10 @@ import edu.gemini.app.ocs.model.Lens;
 import edu.gemini.app.ocs.model.SpecialEquipment;
 import jparsec.observer.LocationElement;
 
-import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.ArrayList;
 
-@Entity(name = "ObservingProgram")
+//@Entity(name = "ObservingProgram")
 public class ObservingProgram {
     @Id
     private int id;
