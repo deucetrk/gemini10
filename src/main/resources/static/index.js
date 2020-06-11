@@ -1,40 +1,11 @@
-// (() => {
-//     const sciencePlan = [];
-//     let selectedSciencePlan;
-//
-//     const API_URL = '//localhost:8443';
-//
-//     const login = async (username, pwd) => {
-//         const res = await fetch(${API_URL}/sciencePlan/getplan,
-//             {
-//             method: 'GET',
-//
-//             headers: {
-//                 'Content-Type': 'application/json'
-//             }
-//         })
-//         return res.json()
-//     }
-// })
 
-(() => {
-    const login = async (username, pwd) => {
-        const res = await fetch(`${API_URL}/sciencePlan/getplan`,
-            {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-        return res.json()
-    }
-})
+alert("Hello")
 
-    // const submitPlan = async (id, uid) => {
-    //     return await fetch(`${API_URL}/api/scienceplan/submit?id=${id}&uid=${uid}`, {
-    //         method: 'GET',
-    //         headers: {
-    //             'Authorization': `Bearer ${getToken()}`
-    //         }
-    //     })
-    // }
+const API_URL = '//localhost:8443';
+async function getAllSciencePlan() {
+    const result = await fetch(`${API_URL}/sciencePlan/getplan`);
+    return await result.json();
+}
+let sp = getAllSciencePlan();
+console.log(sp);
+

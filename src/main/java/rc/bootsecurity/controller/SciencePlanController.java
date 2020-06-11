@@ -197,9 +197,12 @@ public class SciencePlanController {
     }
 
     @GetMapping("getplan")
-    public @ResponseBody String spList(){
-        return "sciencePlanlist";
+    public @ResponseBody
+    Iterable<SciencePlan> getAllSciencePlan() {
+        return sciencePlanRepository.findAll();
     }
+
+
 //    @RequestMapping("selectScienceplan")
 //    public String listSciencePlan(Model model){
 //        model.addAttribute("selectScienceplan", sciencePlanRepository.listAllSciencePlan() );
