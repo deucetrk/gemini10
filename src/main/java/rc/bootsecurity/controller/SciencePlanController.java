@@ -47,7 +47,7 @@ public class SciencePlanController {
     private SciencePlanRepository sciencePlanRepository;
 
     @PostMapping("create") // Map ONLY POST Requests
-    public @ResponseBody
+    public
     String addSciencePlan (@RequestParam String planName,
                            @RequestParam String creator,
                            @RequestParam String submitter,
@@ -102,7 +102,7 @@ public class SciencePlanController {
         }
 
         sciencePlanRepository.save(sp);
-        return "Create SciencePlan Successfully";
+        return "astronomer/index";
     }
 
     @PutMapping("updateStatus")

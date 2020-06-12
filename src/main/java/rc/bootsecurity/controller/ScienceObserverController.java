@@ -45,7 +45,7 @@ public class ScienceObserverController {
     @GetMapping("create")
     public String createObserving(){return "scienceObserver/observing";}
     @PostMapping("observing")
-    public @ResponseBody
+    public
     String addObservingProgram(@RequestParam Integer sciId,
                                @RequestParam String lmake,
                                @RequestParam String lmodel,
@@ -93,7 +93,7 @@ public class ScienceObserverController {
         o.setInstalledDate(installedDate);
         o.setNotes(notes);
         observingRepository.save(o);
-        return "Create Observing Program Successfully";
+        return "scienceObserver/index";
     }
 
     @GetMapping("getprogram")
