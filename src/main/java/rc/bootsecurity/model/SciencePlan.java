@@ -33,7 +33,6 @@ public class SciencePlan extends BaseSciencePlan {
     private double contrast;
     private double brightness;
     private double saturation;
-
     private BaseSciencePlan.STATUS status;
 
     public SciencePlan() {
