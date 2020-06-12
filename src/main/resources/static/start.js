@@ -1,72 +1,78 @@
 (() => {
     let sciencePlan = [];
+    sciencePlan = JSON.parse(JSON.stringify(sciencePlan).replace(/\:null/gi, "\:\"\""));
+
     function createSPElement(plan) {
 
-        const planNo = document.createElement('label');
+
+        const planNo = document.getElementById('planId')
         planNo.innerHTML = plan.id;
 
-        const planName = document.createElement('label');
+        const planName = document.getElementById('planName')
         planName.innerHTML = plan.planName;
 
-        const creator = document.createElement('label');
+        const creator = document.getElementById('creator')
         creator.innerHTML= plan.creator;
 
-        const submitter = document.createElement('label');
+        const submitter = document.getElementById('submitter')
         submitter.innerHTML= plan.submitter;
 
-        const fundingInUSD = document.createElement('label');
+        const fundingInUSD = document.getElementById('fundingInUSD')
         fundingInUSD.innerHTML= plan.fundingInUSD;
 
-        const objectives = document.createElement('label');
+        const objectives = document.getElementById('objectives')
         objectives.innerHTML= plan.objectives;
 
-        const startDate = document.createElement('label');
+        const startDate = document.getElementById('startDate')
         startDate.innerHTML= plan.startDate;
 
-        const endDate = document.createElement('label');
+        const endDate = document.getElementById('endDate')
         endDate.innerHTML= plan.endDate;
 
-        const fileQuality = document.createElement('label');
+        const fileQuality = document.getElementById('fileQuality')
         fileQuality.innerHTML= plan.fileQuality;
 
-        const contrast = document.createElement('label');
+        const contrast = document.getElementById('contrast')
         contrast.innerHTML= plan.contrast;
 
-        const brightness = document.createElement('label');
+        const brightness = document.getElementById('brightness')
         brightness.innerHTML= plan.brightness;
 
-        const saturation = document.createElement('label');
+        const saturation= document.getElementById('saturation')
         saturation.innerHTML= plan.saturation;
 
-        const teleLoc = document.createElement('label');
+        const teleLoc = document.getElementById('teleLoc')
         teleLoc.innerHTML= plan.teleLoc;
 
-        const fileType = document.createElement('label');
+        const fileType = document.getElementById('fileType')
         fileType.innerHTML= plan.fileType;
 
-        const colorType = document.createElement('label');
+        const colorType = document.getElementById('colorType')
         colorType.innerHTML= plan.creator;
 
-        const starSystem = document.createElement('label');
+        const starSystem = document.getElementById('starSystem')
         starSystem.innerHTML= plan.creator;
 
-        const sElem = document.createElement('div');
-        sElem.setAttribute('class', 'plan');
-        sElem.appendChild(planName);
-        sElem.appendChild(creator);
-        sElem.appendChild(submitter);
-        sElem.appendChild(fundingInUSD);
-        sElem.appendChild(objectives);
-        sElem.appendChild(startDate);
-        sElem.appendChild(endDate);
-        sElem.appendChild(fileQuality);
-        sElem.appendChild(contrast);
-        sElem.appendChild(brightness);
-        sElem.appendChild(saturation);
-        sElem.appendChild(teleLoc);
-        sElem.appendChild(fileType);
-        sElem.appendChild(colorType);
-        sElem.appendChild(starSystem);
+        // const sElem = document.createElement('div');
+        // sElem.setAttribute('class', 'plan');
+        // sElem.appendChild(planName);
+        // sElem.appendChild(creator);
+        // sElem.appendChild(submitter);
+        // sElem.appendChild(fundingInUSD);
+        // sElem.appendChild(objectives);
+        // sElem.appendChild(startDate);
+        // sElem.appendChild(endDate);
+        // sElem.appendChild(fileQuality);
+        // sElem.appendChild(contrast);
+        // sElem.appendChild(brightness);
+        // sElem.appendChild(saturation);
+        // sElem.appendChild(teleLoc);
+        // sElem.appendChild(fileType);
+        // sElem.appendChild(colorType);
+        // sElem.appendChild(starSystem);
+
+
+
         // const imgElem = document.createElement('img');
         // imgElem.setAttribute('src', hero.imageURL);
         //
