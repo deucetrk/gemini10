@@ -10,16 +10,13 @@
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        width: 100%;
-        height: 1000px;
     }
 
-    a{
+    a .function{
         color: #ffffff;
         font-size: 100px;
         margin-top: 15%;
         border: none;
-        color: white;
         text-align: center;
         opacity: 0.3;
         transition: 0.3s;
@@ -36,32 +33,22 @@
         font-family: Calibri;
         line-height: 200px;
         font-size: 25px;
-        height: 50%;
-        width: 50%;
         text-align: center;
+        color: #ffffff;
     }
 
     #create {
         text-align: center;
-        background:orange;
-        height: 50%;
-        width: 50%;
+        background: #CDCDCD ;
     }
-    #validate {
-        text-align: center;
-        background:blue
-    }
+
     #test {
         text-align: center;
-        background:green
+        background: #A9A9A9;
     }
     #submit {
         text-align: center;
-        background:red
-    }
-    #observing {
-        text-align: center;
-        background:#e4606d;
+        background: #6E6E6E;
     }
 
 </style></header>
@@ -71,13 +58,13 @@
     <div class="container">
 
         <div class ="function" id="create">
-            <a href="" th:href="@{~/astronomer/create}"> Create Science Plan</a>
+            <a class="function" href="" th:href="@{~/astronomer/create}"> Create Science Plan</a>
         </div>
         <div class ="function" id="test">
-            <a href="" th:href="@{~/astronomer/test}"> Test Science Plan</a>
+            <a class="function" href="" th:href="@{~/astronomer/test}"> Test Science Plan</a>
         </div>
         <div class ="function" id="submit">
-            <a href="" th:href="@{~/astronomer/submit}"> Submit Science Plan</a>
+            <a class="function" href="" th:href="@{~/astronomer/submit}"> Submit Science Plan</a>
         </div>
 
     </div>

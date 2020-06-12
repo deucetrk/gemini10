@@ -26,12 +26,12 @@ public class DbInit implements CommandLineRunner {
         this.userRepository.deleteAll();
 
         // Crete users
-        User ddd = new User("ddd",passwordEncoder.encode("ddd123"),"USER","");
-        User admin = new User("admin",passwordEncoder.encode("admin123"),"ADMIN","ACCESS_TEST1,ACCESS_TEST2");
-        User manager = new User("manager",passwordEncoder.encode("manager123"),"MANAGER","ACCESS_TEST1");
+//        User ddd = new User("ddd",passwordEncoder.encode("ddd123"),"USER","");
+//        User admin = new User("admin",passwordEncoder.encode("admin123"),"ADMIN","ACCESS_TEST1,ACCESS_TEST2");
+//        User manager = new User("manager",passwordEncoder.encode("manager123"),"MANAGER","ACCESS_TEST1");
         User astronomer = new Astronomer("astronomer",passwordEncoder.encode("astronomer123"),"ASTRONOMER","AS_1");
         User scienceObs = new ScienceObserver("scienceObs",passwordEncoder.encode("scienceObs123"),"SCIENCE_OBSERVER","SCOB_1");
-        List<User> users = Arrays.asList(ddd,admin,manager,astronomer,scienceObs);
+        List<User> users = Arrays.asList(astronomer,scienceObs);
 
         // Save to db
         this.userRepository.saveAll(users);

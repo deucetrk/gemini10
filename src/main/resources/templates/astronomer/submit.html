@@ -6,6 +6,10 @@
     <meta charset="UTF-8">
     <title>GEMINI STAR SYSTEM</title>
     <style>
+        * {
+            font-family: Calibri;
+        }
+
         .table{
             border: 1px solid #232323;
             border-left:none;
@@ -16,6 +20,7 @@
         .h1{
             margin: auto;
             text-align: center;
+            font-family: Calibri;
         }
         .radio{
             width:20px;
@@ -33,7 +38,7 @@
 </head>
 <body>
 <header th:insert="fragments.html :: nav"></header>
-<h1>Submit Science Plan</h1>
+<h1 class="h1">Submit Science Plan</h1>
 
 
 <table id="sciencePlanTable" class="table">
@@ -60,7 +65,7 @@
     </tr>
 </table>
 <div class="btn-wrapper">
-    <button id="submitBtn">Submit Science Plan</button>
+    <button id="submitBtn" class="btn btn-success">Submit Science Plan</button>
 </div>
 
 
