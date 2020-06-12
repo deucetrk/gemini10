@@ -1,8 +1,8 @@
 package rc.bootsecurity.model;
 
 
-import edu.gemini.app.ocs.model.BaseSciencePlan;
-import edu.gemini.app.ocs.model.DataProcRequirement;
+import ocs.model.BaseSciencePlan;
+import ocs.model.DataProcRequirement;
 import jparsec.ephem.Target;
 
 import javax.persistence.Entity;

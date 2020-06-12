@@ -1,16 +1,13 @@
 package rc.bootsecurity.controller;
 
-import com.fasterxml.jackson.databind.ser.Serializers;
-import edu.gemini.app.ocs.model.BaseSciencePlan;
-import edu.gemini.app.ocs.model.DataProcRequirement;
+import ocs.model.BaseSciencePlan;
+import ocs.model.DataProcRequirement;
 import jparsec.ephem.Target;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import rc.bootsecurity.db.SciencePlanRepository;
 import rc.bootsecurity.model.SciencePlan;
-import rc.bootsecurity.model.User;
 
 import java.util.ArrayList;
 import java.util.List;

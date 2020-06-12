@@ -1,24 +1,15 @@
 package rc.bootsecurity.controller;
 
-import edu.gemini.app.ocs.model.BaseObservingProgram;
-import jparsec.ephem.Target;
-import jparsec.observer.LocationElement;
-import org.hibernate.validator.constraints.pl.REGON;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import rc.bootsecurity.db.ObservingRepository;
 import rc.bootsecurity.db.SciencePlanRepository;
 import rc.bootsecurity.model.ObservingProgram;
-import edu.gemini.app.ocs.model.*;
-import edu.gemini.app.ocs.*;
-import edu.gemini.app.ocs.OCS;
+import ocs.OCS;
 import rc.bootsecurity.model.SciencePlan;
 
-import javax.persistence.criteria.CriteriaBuilder;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 
 @Controller

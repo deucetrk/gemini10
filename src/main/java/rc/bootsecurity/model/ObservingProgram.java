@@ -1,14 +1,12 @@
 package rc.bootsecurity.model;
 
-import edu.gemini.app.ocs.model.*;
-import edu.gemini.app.ocs.*;
+import ocs.model.*;
 import jparsec.observer.LocationElement;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.util.ArrayList;
 import java.util.Date;
 
 @Entity(name = "ObservingProgram")
