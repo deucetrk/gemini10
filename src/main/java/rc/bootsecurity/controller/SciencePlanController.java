@@ -1,5 +1,6 @@
 package rc.bootsecurity.controller;
 
+import com.fasterxml.jackson.databind.ser.Serializers;
 import edu.gemini.app.ocs.model.BaseSciencePlan;
 import edu.gemini.app.ocs.model.DataProcRequirement;
 import jparsec.ephem.Target;
@@ -11,6 +12,7 @@ import rc.bootsecurity.db.SciencePlanRepository;
 import rc.bootsecurity.model.SciencePlan;
 import rc.bootsecurity.model.User;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -102,6 +104,25 @@ public class SciencePlanController {
         sciencePlanRepository.save(sp);
         return "Create SciencePlan Successfully";
     }
+
+    @PutMapping("updateStatus")
+    public @ResponseBody
+    String updateSciencePlanStatus(@RequestParam int id, @RequestParam int status) {
+        Optional<SciencePlan> newSc = sciencePlanRepository.findById(id);
+        if(newSc.isPresent()) {
+            SciencePlan sp = newSc.get();
+            switch(status) {
+                case 0: sp.setStatus(BaseSciencePlan.STATUS.COMPLETE); break;
+                case 1: sp.setStatus(BaseSciencePlan.STATUS.RUNNING); break;
+                case 2: sp.setStatus(BaseSciencePlan.STATUS.SUBMITTED); break;
+                default: break;
+            }
+            sciencePlanRepository.save(sp);
+        }
+        return "Science Plan status is succesfully updated";
+    }
+
+
 
     @PutMapping("update")
     public @ResponseBody
@@ -201,6 +222,28 @@ public class SciencePlanController {
     Iterable<SciencePlan> getAllSciencePlan() {
         return sciencePlanRepository.findAll();
     }
+
+    @GetMapping("getplanByStatus")
+    public @ResponseBody
+    Iterable<SciencePlan> getSciencePlanByStatus(@RequestParam int status ){
+        List<SciencePlan> sPlan = new ArrayList<>();
+        BaseSciencePlan.STATUS temp;
+        switch(status){
+            case 0: temp = BaseSciencePlan.STATUS.COMPLETE;break;
+            case 1: temp = BaseSciencePlan.STATUS.RUNNING;break;
+            case 2: temp = BaseSciencePlan.STATUS.SUBMITTED;break;
+            default: temp = null;
+        }
+
+        for(SciencePlan sp : getAllSciencePlan()) {
+            if (sp.getStatus() == temp) {
+                sPlan.add(sp);
+            }
+        }
+        return sPlan;
+    }
+
+
 
 
 //    @RequestMapping("selectScienceplan")

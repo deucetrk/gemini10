@@ -3278,3 +3278,6 @@ Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the ap
 2020-06-11 16:24:08 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLException: Table "SCIENCE_PLAN" not found; SQL statement:
 select sciencepla0_.id as id1_0_0_, sciencepla0_.description as descript2_0_0_ from science_plan sciencepla0_ where sciencepla0_.id=? [42102-197]
+2020-06-12 12:32:34 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FORM[*] SCIENCE_PLAN"; SQL statement:
+SELECT * FORM SCIENCE_PLAN [42000-197]
