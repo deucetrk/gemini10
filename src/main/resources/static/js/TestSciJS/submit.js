@@ -41,8 +41,8 @@
     }
 
     function setupListener() {
-        document.getElementById("validateBtn").onclick = function () {
-            setTimeout(function(){location.href = "https://localhost:8443/scienceObserver/index"},1000) ;
+        document.getElementById("submitBtn").onclick = function () {
+            setTimeout(function(){location.href = "https://localhost:8443/astronomer/index"},1000) ;
         };
 
         // document.getElementById("validateBtn").onclick = function () {
@@ -56,7 +56,7 @@
     async function run() {
         setupListener();
 
-        sciencePlan = await getAllSciencePlan(1);
+        sciencePlan = await getAllSciencePlan(0);
         console.log(sciencePlan)
         displaySciencePlan(sciencePlan)
     }
@@ -69,16 +69,16 @@
     async function updateSubmitStat(id,status){
         let m = await updateSciStatus(id,status);
         console.log(m);
-        m.status == 200 ? alert("validate successful"):alert("validate failed");
+        m.status == 200 ? alert("submit successful"):alert("submit failed");
 
     }
-    document.querySelector("#validateBtn").addEventListener("click",()=>{
+    document.querySelector("#submitBtn").addEventListener("click",()=>{
         let listradio = document.querySelectorAll(".radio");
         for(let i = 0; i<listradio.length;i++){
             console.log(listradio[i])
             if(listradio[i].checked == true){
                 const planNo = listradio[i].value
-                const status = 0
+                const status = 2
                 updateSubmitStat(planNo,status)
                 break;
             }
