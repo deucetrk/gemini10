@@ -22,7 +22,7 @@ import java.util.Arrays;
 import java.util.Date;
 
 @Controller
-@RequestMapping("scienceObserver")
+@RequestMapping("/scienceObserver")
 public class ScienceObserverController {
 
     @Autowired
@@ -41,17 +41,9 @@ public class ScienceObserverController {
         return "scienceObserver/validate";
     }
 
-    @GetMapping("createObserving/select")
-    public String selectObs(){
-        return "scienceObserver/selectScienceplan";
-    }
 
-//    @GetMapping("createObserving/create")
-//    public String createObs(){
-//        return "scienceObserver/observing";
-//    }
 
-    @PostMapping("create")
+    @PostMapping("observing")
     public @ResponseBody
     String addObservingProgram(@RequestParam Integer sciId,
                                @RequestParam String lmake,
@@ -100,7 +92,13 @@ public class ScienceObserverController {
         o.setInstalledDate(installedDate);
         o.setNotes(notes);
         observingRepository.save(o);
-        return "Create Observing Program Successfully" + temp.getStarSystem();
+        return "Create Observing Program Successfully";
+    }
+
+    @GetMapping("getprogram")
+    public @ResponseBody
+    Iterable<ObservingProgram> getAllObservingProgram() {
+        return observingRepository.findAll();
     }
 
 }

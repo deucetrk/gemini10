@@ -11,3 +11,8 @@ async function updateSciStatus(id,status) {
     method: 'PUT'
   });
 }
+
+async function getAllObservingProgram(){
+    const result = await fetch(`${API_URL}/scienceObserver/getprogram`);
+    return await result.json();
+}

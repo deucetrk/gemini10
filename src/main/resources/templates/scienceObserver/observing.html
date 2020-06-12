@@ -2,13 +2,40 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:insert="fragments.html :: headerfiles"></head>
 <html lang="en">
-<script src="../static/js/observing.js"></script>
+
+
 <head>
     <meta charset="UTF-8">
     <title>GEMINI STAR SYSTEM</title>
 </head>
 <body>
 <header th:insert="fragments.html :: nav"></header>
+
+<table id="observingProgramTable" class="table">
+    <tr>
+        <th>Select</th>
+        <th>Plan No.</th>
+        <th>Creator</th>
+        <th>Submitter</th>
+        <th>Funding USD</th>
+        <th>Objectives</th>
+        <th>Star System</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Telescope Location</th>
+        <th>Status</th>
+        <th>Plan Name</th>
+
+        <th>File Type</th>
+        <th>File Quality</th>
+        <th>Color Type</th>
+        <th>Contrast</th>
+        <th>Brightness</th>
+        <th>Saturation</th>
+    </tr>
+</table>
+
+
     <div class="container">
         <form th:action="@{~/sciencePlan/create}" method="get" id="form1">
             <label for="lmake">Lens Maker:</label><br>
@@ -60,5 +87,6 @@
             <input id="allsubmit" type="submit" value="Create Observing Program" form="form1">
         </form>
     </div>
+<script th:src="@{~/js/observing.js}" type="text/javascript"></script>
 </body>
 </html>
