@@ -32,8 +32,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/index.html").permitAll()
                 .antMatchers("/profile/**").authenticated()
                 .antMatchers("/admin/**").hasRole("ADMIN")
+
                 .antMatchers("/scienceObserver/**").hasRole("SCIENCE_OBSERVER")
                 .antMatchers("/scienceObserver/**").permitAll()
+
                 .antMatchers("/astronomer/**").hasRole("ASTRONOMER")
                 .antMatchers("/management/**").hasAnyRole("ADMIN", "MANAGER")
                 .antMatchers("/api/public/test1").hasAuthority("ACCESS_TEST1")

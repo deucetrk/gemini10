@@ -37,7 +37,7 @@
 
 
     <div class="container">
-        <form th:action="@{~/sciencePlan/create}" method="get" id="form1">
+        <form th:action="@{~/observingProgram/observing}" method="post" id="form1">
             <label for="lmake">Lens Maker:</label><br>
             <input type="text" id="lmake" name="lmake" required><br>
             <label for="lmodel">Lens Model:</label><br>
@@ -88,5 +88,6 @@
         </form>
     </div>
 <script th:src="@{~/js/observing.js}" type="text/javascript"></script>
+<script th:src="@{~/js/TestSciJS/index.js}" type="text/javascript"></script>
 </body>
 </html>

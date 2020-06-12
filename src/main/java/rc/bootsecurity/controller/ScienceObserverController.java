@@ -42,7 +42,8 @@ public class ScienceObserverController {
     }
 
 
-
+    @GetMapping("create")
+    public String createObserving(){return "scienceObserver/observing";}
     @PostMapping("observing")
     public @ResponseBody
     String addObservingProgram(@RequestParam Integer sciId,
