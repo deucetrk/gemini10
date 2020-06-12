@@ -3278,6 +3278,7 @@ Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the ap
 2020-06-11 16:24:08 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLException: Table "SCIENCE_PLAN" not found; SQL statement:
 select sciencepla0_.id as id1_0_0_, sciencepla0_.description as descript2_0_0_ from science_plan sciencepla0_ where sciencepla0_.id=? [42102-197]
+<<<<<<< HEAD
 2020-06-12 11:42:34 jdbc[13]: null
 org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-197]
 	at org.h2.message.DbException.get(DbException.java:179)
@@ -3369,3 +3370,8 @@ org.h2.message.DbException: The connection was not closed by the application and
 Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-197]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
 	... 86 more
+=======
+2020-06-12 12:32:34 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FORM[*] SCIENCE_PLAN"; SQL statement:
+SELECT * FORM SCIENCE_PLAN [42000-197]
+>>>>>>> adcbe3d86c748923dd1321c781a68290c399e791
