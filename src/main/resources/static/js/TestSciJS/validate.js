@@ -15,8 +15,8 @@
         radio.setAttribute("class","radio")
         sElem.appendChild(radio)
         if(defRadio == 0){
-           radio.checked = true
-           defRadio = 1
+            radio.checked = true
+            defRadio = 1
         }
 
         for(const i in plan){
@@ -41,8 +41,8 @@
     }
 
     function setupListener() {
-        document.getElementById("testBtn").onclick = function () {
-           setTimeout(function(){location.href = "https://localhost:8443/astronomer/index"},1000) ;
+        document.getElementById("validateBtn").onclick = function () {
+            setTimeout(function(){location.href = "https://localhost:8443/scienceObserver/index"},1000) ;
         };
 
         // document.getElementById("validateBtn").onclick = function () {
@@ -56,60 +56,35 @@
     async function run() {
         setupListener();
 
-        sciencePlan = await getAllSciencePlan(3);
+        sciencePlan = await getAllSciencePlan(1);
         console.log(sciencePlan)
         displaySciencePlan(sciencePlan)
     }
     run();
 
 
+    //click validate button
 
 
-//    Click Test Button
-     async function updateTestStat(id,status){
-         let m = await updateSciStatus(id,status);
-            console.log(m);
-            m.status == 200 ? alert("test successful"):alert("test failed");
+    async function updateSubmitStat(id,status){
+        let m = await updateSciStatus(id,status);
+        console.log(m);
+        m.status == 200 ? alert("submit successful"):alert("submit failed");
 
-     }
-
-
-    document.querySelector(".testBtn").addEventListener("click",()=>{
-     let listradio = document.querySelectorAll(".radio");
+    }
+    document.querySelector("#validateBtn").addEventListener("click",()=>{
+        let listradio = document.querySelectorAll(".radio");
         for(let i = 0; i<listradio.length;i++){
             console.log(listradio[i])
             if(listradio[i].checked == true){
                 const planNo = listradio[i].value
-                const status = 1
-                updateTestStat(planNo,status)
+                const status = 0
+                updateSubmitStat(planNo,status)
                 break;
             }
         }
 
     })
-
-    // click validate button
-
-
-    // async function updateSubmitStat(id,status){
-    //     let m = await updateSciStatus(id,status);
-    //     console.log(m);
-    //     m.status == 200 ? alert("submit successful"):alert("submit failed");
-    //
-    // }
-    // document.querySelector("#validateBtn").addEventListener("click",()=>{
-    //     let listradio = document.querySelectorAll(".radio");
-    //     for(let i = 0; i<listradio.length;i++){
-    //         console.log(listradio[i])
-    //         if(listradio[i].checked == true){
-    //             const planNo = listradio[i].value
-    //             const status = 0
-    //             updateStat(planNo,status)
-    //             break;
-    //         }
-    //     }
-    //
-    // })
 
 
 
