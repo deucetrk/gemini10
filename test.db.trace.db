@@ -3375,3 +3375,9 @@ Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the ap
 org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FORM[*] SCIENCE_PLAN"; SQL statement:
 SELECT * FORM SCIENCE_PLAN [42000-197]
 >>>>>>> adcbe3d86c748923dd1321c781a68290c399e791
+2020-06-12 17:25:33 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * OBSERVING_PROGRAM[*]"; SQL statement:
+SELECT * OBSERVING_PROGRAM [42000-197]
+2020-06-12 18:05:42 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Table "OBSERVING_PLAN" not found; SQL statement:
+SELECT * FROM OBSERVING_PLAN [42102-197]

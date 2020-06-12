@@ -32,7 +32,7 @@ public class ObservingProgram extends BaseObservingProgram {
     private double fweight;
 
     //exposure
-    private Double exposures1;
+    private double exposures1;
 
     private boolean isLightDetectorOn;
 
@@ -44,13 +44,14 @@ public class ObservingProgram extends BaseObservingProgram {
 //    private AstronomicalData astroData;
     private String notes;
 
+
     public ObservingProgram() {
 
     }
 
     public ObservingProgram(int id, LocationElement loc, String lmake, String lmodel,
             String lmanufacturer, String lyear, String fmake, String fmanufacturer, String fmodel, int fyear, double fsize, double fweight,
-                                Double exposures1, boolean isLightDetectorOn, String equipmentName, String ownerName, Date installedDate ,String notes)
+                                double exposures1, boolean isLightDetectorOn, String equipmentName, String ownerName, Date installedDate ,String notes)
 //                                AstronomicalData astroData)
                                 {
         this.id = id;
@@ -73,13 +74,14 @@ public class ObservingProgram extends BaseObservingProgram {
         this.notes = notes;
     }
 
-    public Double getExposures1() {
+    public double getExposures1() {
         return exposures1;
     }
 
-    public void setExposures(Double exposures1){
-        this.exposures1 = this.exposures1;
+    public void setExposures(double exposures1){
+        this.exposures1 = exposures1;
     }
+
     public String getLmake() {
         return lmake;
     }

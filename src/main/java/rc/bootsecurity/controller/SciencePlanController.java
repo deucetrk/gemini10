@@ -94,10 +94,10 @@ public class SciencePlanController {
             default: break;
         }
         switch(starSystem){
-            case 1: sp.setStarSystem(Target.TARGET.Dione);break;
-            case 2: sp.setStarSystem(Target.TARGET.Atlas);break;
-            case 3: sp.setStarSystem(Target.TARGET.Janus);break;
-            case 4: sp.setStarSystem(Target.TARGET.Ananke);break;
+            case 1: sp.setStarSystem(Target.TARGET.MARS);break;
+            case 2: sp.setStarSystem(Target.TARGET.NEPTUNE);break;
+            case 3: sp.setStarSystem(Target.TARGET.URANUS);break;
+            case 4: sp.setStarSystem(Target.TARGET.SATURN);break;
             default: break;
         }
 

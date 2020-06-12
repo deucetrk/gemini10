@@ -76,7 +76,7 @@ public class ScienceObserverController {
         date[2] = date[2].substring(0,2);
         OCS ocs = new OCS();
         ObservingProgram o = new ObservingProgram();
-        o.setLoc(ocs.getLocation(Integer.parseInt(date[0]),Integer.parseInt(date[1]),Integer.parseInt(date[2]), (temp.getStarSystem())));
+        o.setLoc(ocs.getLocation(Integer.parseInt(date[0]),Integer.parseInt(date[1]),Integer.parseInt(date[2]), temp.getStarSystem()));
         o.setLmake(lmake);
         o.setLmodel(lmodel);
         o.setLmanufacturer(lmanufacturer);
@@ -100,7 +100,7 @@ public class ScienceObserverController {
         o.setInstalledDate(installedDate);
         o.setNotes(notes);
         observingRepository.save(o);
-        return "Create Observing Program Successfully";
+        return "Create Observing Program Successfully" + temp.getStarSystem();
     }
 
 }
