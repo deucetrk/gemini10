@@ -10,32 +10,53 @@
 <body>
 <header th:insert="fragments.html :: nav"></header>
     <div class="container">
-        <div class="selectedPlan">Selected Science Plan</div>
-        <form th:action="@{~/sciencePlan/create" method="get" id="form1">
-            <label for="movement">Movement of Telescope:</label><br>
-            <input type="text" id="movement" name="movement" required><br>
-            <label for="lens">Lens:</label>
-            <select id="lens" name="lens">
-                <option id="lenslist"></option>
+        <form th:action="@{~/sciencePlan/create}" method="get" id="form1">
+            <label for="lmake">Lens Maker:</label><br>
+            <input type="text" id="lmake" name="lmake" required><br>
+            <label for="lmodel">Lens Model:</label><br>
+            <input type="text" id="lmodel" name="lmodel" required><br>
+            <label for="lmanufacturer">Lens Manufacturer:</label><br>
+            <input type="text" id="lmanufacturer" name="lmanufacturer" required><br>
+            <label for="lyear">Lens Year:</label><br>
+            <input type="text" id="lyear" name="lyear" required><br>
+
+            <label for="fmake">Filter Maker:</label><br>
+            <input type="text" id="fmake" name="fmake" required><br>
+            <label for="fmodel">Filter Model:</label><br>
+            <input type="text" id="fmodel" name="fmodel" required><br>
+            <label for="fmanufacturer">Filter Manufacturer:</label><br>
+            <input type="text" id="fmanufacturer" name="fmanufacturer" required><br>
+            <label for="fyear">Filter Year:</label><br>
+            <input type="text" id="fyear" name="fyear" required><br>
+            <label for="fsize">Filter Size:</label><br>
+            <input type="text" id="fsize" name="fsize" required><br>
+            <label for="fweight">Filter Weight:</label><br>
+            <input type="text" id="fweight" name="fweight" required><br>
+            <label for="exposures1">Exposures:</label><br>
+            <input type="text" id="exposures1" name="exposures1" required><br>
+
+            <label for="isLightDetectorOn">Light Detector:</label>
+            <select name="isLightDetectorOn" id="isLightDetectorOn">
+                <option value="1">ON</option>
+                <option value="0">OFF</option>
             </select><br>
-            <label for="filter">Filters:</label>
-            <select id="filter" name="filter">
-                <option id="filterlist"></option>
-            </select><br>
-            <label for="focus">Focus Range:</label><br>
-            <input type="text" id="focus" name="focus" required><br>
-            <label for="light">Light Detector:</label>
-            <select id="light" name="light">
-                <option id="lightlist"></option>
-            </select><br>
-            <form action="" method="get" id="form2">
-                <text> Require Special Equipment?</text><br>
-                <input type="radio" id="speYes" name="specialEquipment" value="Yes">
-                <label for="speYes">Yes</label><br>
-                <input type="radio" id="speNo" name="specialEquipment" value="No">
-                <label for="speNo">No</label><br>
-                <input  id="specialepuip" type="submit" value="Send Notification" form="form2">
-            </form>
+
+            <label for="equipmentName">Special Equipment Name:</label><br>
+            <input type="text" id="equipmentName" name="equipmentName" required><br>
+            <label for="installedDate">Installation Date:</label><br>
+            <input type="text" id="installedDate" name="installedDate" placeholder="dd/mm/yyyy" required><br>
+            <label for="notes">Notes:</label><br>
+            <input type="text" id="notes" name="notes" required><br>
+
+
+<!--            <form action="" method="get" id="form2">-->
+<!--                <text> Require Special Equipment?</text><br>-->
+<!--                <input type="radio" id="speYes" name="specialEquipment" value="Yes">-->
+<!--                <label for="speYes">Yes</label><br>-->
+<!--                <input type="radio" id="speNo" name="specialEquipment" value="No">-->
+<!--                <label for="speNo">No</label><br>-->
+<!--                <input  id="specialepuip" type="submit" value="Send Notification" form="form2">-->
+<!--            </form>-->
             <input id="allsubmit" type="submit" value="Create Observing Program" form="form1">
         </form>
     </div>

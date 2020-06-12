@@ -1,6 +1,10 @@
 package rc.bootsecurity.db;
 
-public interface ObservingRepository    {
+import org.springframework.data.repository.CrudRepository;
+import rc.bootsecurity.model.ObservingProgram;
+
+
+public interface ObservingRepository extends CrudRepository<ObservingProgram, Integer> {
+
 }
 
-//extends CrudRepository<ObservingProgram, Integer>
