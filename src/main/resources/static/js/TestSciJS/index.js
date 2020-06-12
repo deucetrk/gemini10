@@ -1,7 +1,7 @@
 
 const API_URL = '//localhost:8443';
-async function getAllSciencePlan() {
-    const result = await fetch(`${API_URL}/sciencePlan/getplan`);
+async function getAllSciencePlan(status) {
+    const result = await fetch(`${API_URL}/sciencePlan/getplanByStatus?status=${status}`);
     return await result.json();
 }
 

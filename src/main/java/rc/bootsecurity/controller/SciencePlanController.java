@@ -232,6 +232,7 @@ public class SciencePlanController {
             case 0: temp = BaseSciencePlan.STATUS.COMPLETE;break;
             case 1: temp = BaseSciencePlan.STATUS.RUNNING;break;
             case 2: temp = BaseSciencePlan.STATUS.SUBMITTED;break;
+            case 3: temp = null; break;
             default: temp = null;
         }
 

@@ -40,10 +40,17 @@
         })
     }
 
-    async function run() {
-        // setupListener();
+    function setupListener() {
+        document.getElementById("testBtn").onclick = function () {
+            location.href = "https://localhost:8443/astronomer/index";
+        };
+    }
 
-        sciencePlan = await getAllSciencePlan();
+
+    async function run() {
+        setupListener();
+
+        sciencePlan = await getAllSciencePlan(3);
         console.log(sciencePlan)
         displaySciencePlan(sciencePlan)
     }
@@ -51,8 +58,20 @@
 
 //    Click Test Button
      async function updateStat(id,status){
-            alert(await updateSciStatus(id,status))
+         let m = await updateSciStatus(id,status);
+            console.log(m);
+            m.status == 200 ? alert("test successful"):alert("test failed");
+
+
      }
+
+
+
+
+
+
+
+
     document.querySelector(".testBtn").addEventListener("click",()=>{
      let listradio = document.querySelectorAll(".radio");
         for(let i = 0; i<listradio.length;i++){
