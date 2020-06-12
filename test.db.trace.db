@@ -3381,3 +3381,21 @@ SELECT * OBSERVING_PROGRAM [42000-197]
 2020-06-12 18:05:42 jdbc[13]: exception
 org.h2.jdbc.JdbcSQLException: Table "OBSERVING_PLAN" not found; SQL statement:
 SELECT * FROM OBSERVING_PLAN [42102-197]
+2020-06-12 22:01:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "SCIENCE_PLAN" not found; SQL statement:
+insert into science_plan (brightness, color_type, contrast, creator, end_date, file_quality, file_type, funding_inusd, objectives, plan_name, saturation, star_system, start_date, status, submitter, telescope_location, plan_no) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [42102-197]
+2020-06-12 22:01:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "SCIENCE_PLAN" not found; SQL statement:
+insert into science_plan (brightness, color_type, contrast, creator, end_date, file_quality, file_type, funding_inusd, objectives, plan_name, saturation, star_system, start_date, status, submitter, telescope_location, plan_no) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [42102-197]
+2020-06-12 22:02:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "SCIENCE_PLAN" not found; SQL statement:
+insert into science_plan (brightness, color_type, contrast, creator, end_date, file_quality, file_type, funding_inusd, objectives, plan_name, saturation, star_system, start_date, status, submitter, telescope_location, plan_no) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [42102-197]
+2020-06-12 22:05:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "SCIENCE_PLAN" not found; SQL statement:
+insert into science_plan (brightness, color_type, contrast, creator, end_date, file_quality, file_type, funding_inusd, objectives, plan_name, saturation, star_system, start_date, status, submitter, telescope_location, plan_no) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [42102-197]
+2020-06-12 22:06:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "SCIENCE_PLAN" not found; SQL statement:
+insert into science_plan (brightness, color_type, contrast, creator, end_date, file_quality, file_type, funding_inusd, objectives, plan_name, saturation, star_system, start_date, status, submitter, telescope_location, plan_no) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [42102-197]
+2020-06-12 22:06:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "SCIENCE_PLAN" not found; SQL statement:
+insert into science_plan (brightness, color_type, contrast, creator, end_date, file_quality, file_type, funding_inusd, objectives, plan_name, saturation, star_system, start_date, status, submitter, telescope_location, plan_no) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [42102-197]
